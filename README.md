@@ -174,7 +174,7 @@ Enter values for COL1 to COL4 (comma-separated):
 ```
 
 ## Contributing
-Contributions are welcome! If you''d like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.
 
 ## License
 This project is licensed under the terms of the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
