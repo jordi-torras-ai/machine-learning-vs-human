@@ -7,7 +7,7 @@ Machine Learning vs. Human is an initiative delving into different machine learn
 
 To begin, you'll need to examine the Comma-Separated-Value (CSV) dataset available at:
 
-https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv
+[eada-human-vs-machine-dataset%20-%20static-training-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv)
 
 This CSV file comprises six columns:
 
@@ -100,7 +100,7 @@ For more information on TensorFlow and installation instructions, you can visit 
 ```
 
 ## Usage
-1. Install [Python 3](python.org) and [TensorFlow](https://www.tensorflow.org)
+1. Install [Python 3](https://www.python.org) and [TensorFlow](https://www.tensorflow.org)
 2. Train a machine learning model 
 ```
 cd shell
