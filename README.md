@@ -40,10 +40,6 @@ For the application to work you need installed in your platform:
 │   ├── eada-human-vs-machine-dataset - static-testing-data.csv
 │   └── eada-human-vs-machine-dataset - static-training-data.csv
 ├── logs
-│   ├── train
-│   │   └── events.out.tfevents.1709915622.Jordis-Air.attlocal.net.9543.0.v2
-│   └── validation
-│       └── events.out.tfevents.1709915622.Jordis-Air.attlocal.net.9543.1.v2
 ├── models
 │   └── eada-human-vs-machine.keras
 ├── shell
