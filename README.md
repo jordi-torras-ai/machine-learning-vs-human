@@ -3,7 +3,7 @@
 ## Overview
 Machine Learning vs. Human is an initiative delving into different machine learning algorithms and techniques to address classification challenges. The primary objective is to assess how machine learning models fare against human intuition in a given scenario.
 
-## Challenge
+## Human Challenge
 
 To begin, you'll need to examine the Comma-Separated-Value (CSV) dataset available at:
 
@@ -17,7 +17,11 @@ This CSV file comprises six columns:
 
 Your task as a human participant is to deduce the underlying logic behind the assignment of "YES" or "NO" labels based on the values in the four columns. You can utilize spreadsheet software to explore various hypotheses, formulas, or calculations to discern this logic.
 
-Subsequently, the project implements a basic neural network trained on the same dataset to create a predictive model for determining when a "YES" or "NO" label should be assigned.
+I hope you're able to discern the underlying logic! (I assure you, there is one). Feel free to time how long it takes for you to uncover that logic. Also, I'm confident the neural network will grasp it much faster than you! ...and with only a handful of neurons :simile:. That's what the next part of the exercise is about. 
+
+## Machine Challenge
+
+The project implements a basic neural network trained on the same dataset to create a predictive model for determining when a "YES" or "NO" label should be assigned.
 
 To validate the effectiveness of the model, the dataset [eada-human-vs-machine-dataset - static-testing-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-testing-data.csv) is employed to verify whether the neural network accurately captures the underlying logic.
 
