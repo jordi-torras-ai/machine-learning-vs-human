@@ -10,7 +10,7 @@ First you need to explore the Comma-Separated-Value dataset:
 
 https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv
 
-The CSV file has 4 columns: 
+The CSV file has 6 columns: 
 . id : is a numeric id, simply goes from 1 to 1000, and does not have any purpose, other than identify a row
 . COL1, COL2, COL3, COL4: each column contains a integer number that ranges from 0 to 10, 
 . LABEL: the label has either "YES" or "NO"
@@ -21,7 +21,10 @@ You can upload the file into a spreadsheet program, and try different hypothesis
 The rest of the project implements a simple neural network that learns from the same file, and creates a model that tries to predict when a YES or NO should be given. 
 
 To check if the model works, the dataset `eada-human-vs-machine-dataset - static-testing-data.csv` is used to check if the neural network got the logic correctly.  
+
 In most of the cases, the trained neural network predicts correctly more than 99% of the cases in the test dataset. 
+
+Most of the code in this project has been generated interactively with ChatGPT.
 
 ## Requirements
 For the application to work you need installed in your platform: 
