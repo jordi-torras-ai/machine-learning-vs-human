@@ -7,7 +7,7 @@ Machine Learning vs. Human is an initiative delving into different machine learn
 
 To begin, you'll need to examine the Comma-Separated-Value (CSV) dataset available at:
 
-[eada-human-vs-machine-dataset%20-%20static-training-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv)
+[eada-human-vs-machine-dataset - static-training-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv)
 
 This CSV file comprises six columns:
 
