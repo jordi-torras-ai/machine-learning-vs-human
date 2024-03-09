@@ -1,69 +1,112 @@
 # Machine Learning vs. Human
 
 ## Overview
-Machine Learning vs. Human is a project that explores various machine learning algorithms and techniques to solve classification problems. 
-It aims to compare the performance of machine learning models against human model guessing in a specific example.
+Machine Learning vs. Human is an initiative delving into different machine learning algorithms and techniques to address classification challenges. The primary objective is to assess how machine learning models fare against human intuition in a given scenario.
 
 ## Challenge
 
-First you need to explore the Comma-Separated-Value dataset:
+To begin, you'll need to examine the Comma-Separated-Value (CSV) dataset available at:
 
 https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-training-data.csv
 
-The CSV file has 6 columns: 
-. id : is a numeric id, simply goes from 1 to 1000, and does not have any purpose, other than identify a row
-. COL1, COL2, COL3, COL4: each column contains a integer number that ranges from 0 to 10, 
-. LABEL: the label has either "YES" or "NO"
+This CSV file comprises six columns:
 
-Now, as a human, your mission is to guess what is the logic of the YES/NO label so you are able to predict it. 
-You can upload the file into a spreadsheet program, and try different hypothesis, formulas or calculations in order to guess what is the logic that the 4 columns produce a YES or a NO (there is a logic).
+- **id**: A numeric identifier ranging from 1 to 1000, serving solely for row identification.
+- **COL1, COL2, COL3, COL4**: Each column contains an integer value ranging from 0 to 10.
+- **LABEL**: This column contains either "YES" or "NO" labels.
 
-The rest of the project implements a simple neural network that learns from the same file, and creates a model that tries to predict when a YES or NO should be given. 
+Your task as a human participant is to deduce the underlying logic behind the assignment of "YES" or "NO" labels based on the values in the four columns. You can utilize spreadsheet software to explore various hypotheses, formulas, or calculations to discern this logic.
 
-To check if the model works, the dataset `eada-human-vs-machine-dataset - static-testing-data.csv` is used to check if the neural network got the logic correctly.  
+Subsequently, the project implements a basic neural network trained on the same dataset to create a predictive model for determining when a "YES" or "NO" label should be assigned.
 
-In most of the cases, the trained neural network predicts correctly more than 99% of the cases in the test dataset. 
+To validate the effectiveness of the model, the dataset `eada-human-vs-machine-dataset - static-testing-data.csv` is employed to verify whether the neural network accurately captures the underlying logic.
 
-Most of the code in this project has been generated interactively with ChatGPT.
+In the code, the neural network is designed with a total of 19 neurons distributed across 4 layers. 
+
+1. **Input Layer (Dense, 10 neurons, ReLU activation):** This is the first layer of the neural network. It consists of 10 neurons, each receiving input from the dataset. The ReLU (Rectified Linear Unit) activation function is applied to each neuron's output, ensuring that negative values are set to zero while positive values remain unchanged.
+
+2. **Hidden Layer 1 (Dense, 5 neurons, ReLU activation):** The second layer is a hidden layer, meaning it is not directly connected to the input or output. It contains 5 neurons, each receiving input from the previous layer. Again, the ReLU activation function is applied to each neuron's output.
+
+3. **Hidden Layer 2 (Dense, 3 neurons, ReLU activation):** Similar to the first hidden layer, this layer contains 3 neurons, each receiving input from the previous layer. ReLU activation is applied to each neuron's output.
+
+4. **Output Layer (Dense, 1 neuron, Sigmoid activation):** This is the final layer of the neural network. It contains a single neuron, representing the output of the network. The Sigmoid activation function is applied to the neuron's output, squashing the value between 0 and 1. This is commonly used for binary classification tasks, where the output can be interpreted as the probability of a certain class (e.g., "YES" or "NO").
+
+You can experiment with this neural network by adjusting the number of neurons, layers, and other parameters.
+
+You can examine the creation of the neural network in the file `create_model_from_csv.py`.
+
+```
+    model = Sequential([
+        Dense(10, activation='relu', input_shape=input_shape),
+        Dense(5, activation='relu'),
+        Dense(3, activation='relu'),
+        Dense(1, activation='sigmoid')
+    ])
+```
+It's worth noting that in the majority of cases, the trained neural network achieves an accuracy rate of over 99% when predicting labels in the test dataset.
+
+_Most of the code in this project was generated interactively with ChatGPT_.
 
 ## Requirements
-For the application to work you need installed in your platform: 
-- Unix-like command line interface
-- Python 3
-- TensorFlow
+To ensure the proper functioning of the application, you need to have the following installed on your platform:
+
+- **Unix-like Command Line Interface**: If you are using a Unix-like operating system, such as Linux or macOS, you already have access to a command line interface. If not, you may need to install one. You can find more information on how to install and use Unix-like command line interfaces [here](https://www.tutorialspoint.com/unix/unix-getting-started.htm).
+
+- **Python 3**: Make sure you have Python 3 installed on your system. You can download and install Python 3 from the official Python website [here](https://www.python.org/downloads/).
+
+- **TensorFlow**: TensorFlow is a popular open-source machine learning framework developed by Google. You can install TensorFlow using Python's package manager, pip. Simply run the following command in your command line interface:
+
+```bash
+pip install tensorflow
+```
+
+For more information on TensorFlow and installation instructions, you can visit the TensorFlow website [here](https://www.tensorflow.org/install).
 
 ## Features
-- uses TensorFlow to create a neural network that is trained based on the dataset 
-- you can interactively play with the model on the command line to see how predicts labels
-- massively test the model against a testing data set to see the accuracy
+
+- **Utilizes TensorFlow**: The application harnesses the power of TensorFlow to construct a neural network model, which is then trained using the provided dataset.
+
+- **Interactive Model Exploration**: Users have the option to interactively engage with the model via the command line interface. This feature allows users to observe the model's predictions for various inputs, providing valuable insight into its behavior.
+
+- **Comprehensive Testing**: The application rigorously tests the trained model against a dedicated testing dataset. This extensive testing process enables users to evaluate the accuracy and reliability of the model across diverse scenarios.
+
 
 ## Folder Structure
 ```
+.
+├── README.md
 ├── csv
+│   ├── eada-human-vs-machine-dataset - alternate-test-data.csv
+│   ├── eada-human-vs-machine-dataset - alternate-training-data.csv
 │   ├── eada-human-vs-machine-dataset - static-testing-data.csv
 │   └── eada-human-vs-machine-dataset - static-training-data.csv
 ├── logs
 ├── models
+│   ├── eada-human-vs-machine-alternate.keras
 │   └── eada-human-vs-machine.keras
 ├── shell
 │   ├── predict.sh
+│   ├── remove_logs.sh
 │   ├── show_model.sh
 │   ├── test_predictions.sh
-│   └── train.sh
+│   ├── test_predictions_alternate.sh
+│   ├── train.sh
+│   └── train_alternate.sh
 └── src
     ├── create_model_from_csv.py
     ├── predict_from_model.py
     └── test_predictions.py
+
 ```
 
 ## Usage
-1. Install Python 3 and TensorFlow
+1. Install [Python 3](python.org) and [TensorFlow](https://www.tensorflow.org)
 2. Train a machine learning model 
 ```
 cd shell
 sh train.sh
 ```
-the result of that should create the model and diplay some data:
+After running this, the process should create the model and display some data:
 ```
 Model Summary:
 --------------------
@@ -110,18 +153,15 @@ user	0m10.645s
 sys	0m1.057s
 ```
 
-The Model Summary shows the the weights of every neuron of every layer as well as the biases in every layer (your environment will show different numbers, of course).
-It tells the loss and the accuracy. 
-Where the model `eada-human-vs-machine.keras` has been saved.
+The Model Summary displays the weights of every neuron in each layer, along with the biases in every layer (note that your environment will show different numbers). It also provides information on the loss and accuracy metrics. Additionally, the location where the model `eada-human-vs-machine.keras` has been saved is indicated.
 
 3. Explore the model
-To check the model and how it has learned.
+To assess the model and evaluate its learning process, execute:
 ```
 cd shell
 sh show_model.sh
 ```
-On a browser, you can open the URL http://localhost:6006 and check the training process and the features of the model with TensorBoard. 
-To finish the webserver press `Ctrl+C`
+To monitor the training process and explore the model's features using TensorBoard, simply open your web browser and navigate to http://localhost:6006. To stop the web server, press `Ctrl+C` on your command line interface.
 ```
 Open http://localhost:6006 in browser
 Serving TensorBoard on localhost; to expose to the network, use a proxy or pass --bind_all
@@ -153,11 +193,10 @@ Expected: YES, Predicted: NO, Probability: 0.2706, Values: id: 749, COL1: 10, CO
 Expected: YES, Predicted: NO, Probability: 0.3936, Values: id: 772, COL1: 7, COL2: 10, COL3: 10, COL4: 4
 Expected: YES, Predicted: NO, Probability: 0.4582, Values: id: 904
 ```
-It will show the cases in the dataset (that contains 1000 rows) that did not predict the data correctly. 
+It will display the cases in the dataset (which contains 1000 rows) where the predictions were incorrect.
 
 5. Check individual cases
-You can check specific examples, entergin the data for C1..C4 columns, separated by comma. 
-It keeps asking for examples, you can leave with `Ctrl-d`.
+You can check specific examples by entering the data for columns C1 through C4, separated by commas. The program will continue to prompt for examples until you exit with `Ctrl-d`.
 ```
 cd shell
 sh predict.sh
@@ -171,6 +210,23 @@ Probability: 1.0000
 Predicted Value: 1.0000
 Enter values for COL1 to COL4 (comma-separated): 
 ```
+## Alternative Challenge
+
+An alternative dataset is provided [here](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%alternate-training-data.csv).
+
+If you've successfully tackled the initial challenge, you may find this alternative challenge considerably easier.
+
+However, you'll notice that machine learning algorithms struggle to create an effective model for predicting the YES/NO label based on this data.
+
+To observe how the same neural network performs with this alternative data:
+
+```bash
+cd shell
+sh train_alternate.sh
+sh test_predictions.sh
+```
+
+Upon running these commands, you'll observe that the model correctly approximately 50% of the cases, resembling random guessing for YES/NO labels.
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request.

@@ -79,7 +79,7 @@ model = create_model(input_shape)
 tensorboard_callback = TensorBoard(log_dir="../logs")
 
 # Train the model
-history = model.fit(X, y, epochs=300, batch_size=64, validation_split=0.2, callbacks=[tensorboard_callback])
+history = model.fit(X, y, epochs=500, batch_size=64, validation_split=0.2, callbacks=[tensorboard_callback])
 
 loss, accuracy = model.evaluate(X, y)
 

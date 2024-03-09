@@ -73,11 +73,6 @@ correct_predictions = np.sum(predicted_labels.flatten() == y_test.to_numpy())
 total_predictions = len(y_test)
 accuracy = correct_predictions / total_predictions * 100
 
-# Display results
-print(f"Total predictions: {total_predictions}")
-print(f"Correct predictions: {correct_predictions}")
-print(f"Incorrect predictions: {total_predictions - correct_predictions}")
-print(f"Accuracy: {accuracy:.2f}%")
 
 # Show details of incorrect predictions
 incorrect_indices = np.where(predicted_labels.flatten() != y_test.to_numpy())[0]
@@ -87,3 +82,9 @@ for idx in incorrect_indices:
     probability = predictions[idx][0]
     cols_values = ", ".join([f"{col}: {test_data.iloc[idx][col]}" for col in test_data.columns[:-1]])
     print(f"Expected: {expected_label}, Predicted: {predicted_label}, Probability: {probability:.4f}, Values: {cols_values}")
+
+# Display results
+print(f"Total predictions: {total_predictions}")
+print(f"Correct predictions: {correct_predictions}")
+print(f"Incorrect predictions: {total_predictions - correct_predictions}")
+print(f"Accuracy: {accuracy:.2f}%")
