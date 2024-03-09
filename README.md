@@ -17,7 +17,7 @@ This CSV file comprises six columns:
 
 Your task as a human participant is to deduce the underlying logic behind the assignment of "YES" or "NO" labels based on the values in the four columns. You can utilize spreadsheet software to explore various hypotheses, formulas, or calculations to discern this logic.
 
-I hope you're able to discern the underlying logic! (I assure you, there is one). Feel free to time how long it takes for you to uncover that logic. Also, I'm confident the neural network will grasp it much faster than you! ...and with only a handful of neurons :simile:. That's what the next part of the exercise is about. 
+I hope you're able to discern the underlying logic! (I assure you, there is one). Feel free to time how long it takes for you to uncover that logic. Also, I'm confident the neural network will grasp it much faster than you! ...and with only a handful of neurons :smile:. That's what the next part of the exercise is about. 
 
 ## Machine Challenge
 
