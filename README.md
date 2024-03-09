@@ -212,7 +212,7 @@ Enter values for COL1 to COL4 (comma-separated):
 ```
 ## Alternative Challenge
 
-An alternative dataset is provided [here](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%alternate-training-data.csv).
+An alternative dataset is provided [eada-human-vs-machine-dataset - alternate-training-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20alternate-training-data.csv).
 
 If you've successfully tackled the initial challenge, you may find this alternative challenge considerably easier.
 
