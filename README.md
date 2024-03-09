@@ -19,7 +19,7 @@ Your task as a human participant is to deduce the underlying logic behind the as
 
 Subsequently, the project implements a basic neural network trained on the same dataset to create a predictive model for determining when a "YES" or "NO" label should be assigned.
 
-To validate the effectiveness of the model, the dataset `eada-human-vs-machine-dataset - static-testing-data.csv` is employed to verify whether the neural network accurately captures the underlying logic.
+To validate the effectiveness of the model, the dataset [eada-human-vs-machine-dataset - static-testing-data.csv](https://github.com/jordi-torras-ai/machine-learning-vs-human/blob/main/csv/eada-human-vs-machine-dataset%20-%20static-testing-data.csv) is employed to verify whether the neural network accurately captures the underlying logic.
 
 In the code, the neural network is designed with a total of 19 neurons distributed across 4 layers. 
 
