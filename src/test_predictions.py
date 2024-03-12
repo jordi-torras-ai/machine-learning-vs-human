@@ -61,6 +61,7 @@ test_data_scaled = preprocess_input(test_data)
 # Split the testing data into features (X_test) and labels (y_test)
 X_test = test_data_scaled.drop(columns=['LABEL'])
 y_test = test_data_scaled['LABEL']
+print (X_test)
 
 # Make predictions using the model
 predictions = model.predict(X_test)

@@ -1,4 +1,4 @@
-DATA="../csv/eada-human-vs-machine-dataset - static-testing-data.csv"
+DATA="../csv/eada-human-vs-machine-dataset - static-training-data.csv"
 MODEL=../models/eada-human-vs-machine.keras
 LOGS=../logs/
 rm -rf $LOGS

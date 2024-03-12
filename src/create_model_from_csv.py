@@ -37,12 +37,12 @@ def print_model_parameters(model):
         weights, biases = layer.get_weights()
         print("\tWeights:\t\t")
         print_weights(weights)
-        print("\tBiases:", *(f"{x:.3f}" for x in biases), sep=", ")
+        print("\tBiases:", *(f"{x:.2f}" for x in biases), sep=", ")
 
 def print_weights(weights):
     """Print the weights of a layer."""
     for i, w in enumerate(weights):
-        print(f"\t\tWeight {i + 1}:", *(f"{x:.3f}" for x in w), sep=", ")
+        print(f"\t\tWeight {i + 1}:", *(f"{x:.2f}" for x in w), sep=", ")
 
 # Check if the CSV file name and model file name are provided as command-line arguments
 if len(sys.argv) != 3:
